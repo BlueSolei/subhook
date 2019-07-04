@@ -170,6 +170,9 @@ class Hook {
   {
   }
 
+  Hook(Hook&&) = default;
+  Hook& operator=(Hook&&) = default;
+    
   ~Hook() {
     subhook_remove(hook_);
     subhook_free(hook_);
